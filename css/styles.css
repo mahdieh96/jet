@@ -1,0 +1,164 @@
+:root {
+  --color-primary: #00ffff;
+  --color-secondary: #ccccb3;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5rem;
+}
+.btn {
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.btn--launch {
+  background-color: white;
+  color: black;
+}
+
+.btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.btn--cancel {
+  background-color: red;
+  color: white;
+}
+
+.btn--block {
+  display: block;
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.btn--inline {
+  width: 40%;
+}
+.btn--popup {
+  background-color: white;
+}
+
+.popup {
+  z-index: 1;
+  position: fixed;
+  width: 50%;
+  display: none;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.popup .btn--inline {
+  margin: 1rem;
+}
+
+.popup p {
+  text-align: center;
+}
+.left {
+  position: fixed;
+  background-color: var(--color-primary);
+  height: 100vh;
+  width: 50vw;
+  top: 0;
+  left: 0;
+}
+
+.counter p {
+  font-weight: 700;
+}
+
+.right {
+  position: fixed;
+  height: 100vh;
+  width: 50vw;
+
+  top: 0;
+  right: 0;
+}
+.jet {
+  /* display: block; */
+  width: 30%;
+  /* max-width: 140px; */
+  margin: auto;
+  position: absolute;
+  bottom: -13px;
+  left: 35%;
+}
+
+#nervous {
+  width: 40%;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+}
+
+#wait {
+  width: 40%;
+  position: absolute;
+  left: 60%;
+  bottom: 10%;
+}
+@keyframes jet {
+  from {
+    bottom: 0px;
+  }
+  to {
+    /* display: none; */
+    bottom: 1000px;
+  }
+}
+@keyframes boom {
+  from {
+    bottom: 1000px;
+  }
+  to {
+    /* display: none; */
+    bottom: 0px;
+  }
+}
+.ground {
+  position: absolute;
+
+  bottom: 0;
+}
+
+.jet--moving {
+  animation-name: jet;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+.boom--moving {
+  animation-name: boom;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+
+#boom {
+  width: 30%;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}
